@@ -1,1 +1,1 @@
-Exercise from Missing Semester Course
+Personal blog
