@@ -24,7 +24,7 @@ description: >- # this means to ignore newlines until "baseurl:"
   Join me on my DevOps journey as I share insights, tools, technologies, 
   and best practices, along with experiences in embedded systems, 
   diy projects, and more. Let's learn and grow together.
-baseurl: "/blog" # the subpath of your site, e.g. /blog
+baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: CristiSulighete
 github_username:  cristisulighetean
