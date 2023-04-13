@@ -1,9 +1,0 @@
-_site
-_posts/2022-11-06-welcome-to-jekyll.markdown
-.sass-cache
-.jekyll-cache
-.jekyll-metadata
-vendor
-
-# MacOS
-*.DS_Store
