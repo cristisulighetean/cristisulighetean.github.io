@@ -6,21 +6,21 @@ url: "https://cristisulighetean.github.io/"
 theme_settings:
   # Meta
   title: Binary Voyage
-  avatar: 
-  favicon: 
+  avatar: assets/img/avatar.png
+  favicon: assets/favicon.ico
   gravatar: # Email MD5 hash
-  description: "A devOps blog sprinkled with other IT related projects" # used by search engines
+  description: "A devOps blog sprinkled with other tech related projects" # used by search engines
 
   # Header and footer text
   header_text: >
-    <p> Join me on my DevOps journey as I share insights, tools, technologies, and best practices. You will also see posts about other stuff like embedded, diy projects and hobbies. </p>
+    <p> Embark on my DevOps adventure with me as I uncover insights, showcase tools, reveal technologies, and share best practices. Expect to see posts delving into other exciting areas like embedded systems, DIY projects, and captivating hobbies.</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a>
 
   # Icons
   rss: false
-  email_address: # Full email address, e.g. "sam@example.com"
+  email_address: "cristiansulighetean@gmail.com"
   behance:
   bitbucket:
   dribbble:
