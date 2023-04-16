@@ -4,7 +4,7 @@ title: "LXC vs Docker containers"
 tags: [proxmox, containers, docker, lxc, linux]
 ---
 
-We will explore the world of containerization, focusing on two popular container technologies: LXC and Docker
+Exploring the world of containerization while focusing on two popular container technologies: LXC and Docker
 
 ## Introduction
 
