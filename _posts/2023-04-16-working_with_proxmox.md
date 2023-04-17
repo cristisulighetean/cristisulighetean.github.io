@@ -39,10 +39,24 @@ Templates can include installed software, custom configurations, and any other s
 To create a VM template in Proxmox VE, follow these steps:
 
 1. Prepare a VM with the desired configuration, software, and settings.
-2. Update the VM to the latest version with `apt update && apt dist-upgrade`.
-3. Remove any unique identifiers, such as SSH host keys, with `sudo rm /etc/ssh/ssh_host_*`.
-4. Clean up unnecessary files and packages with `apt clean`, `apt autoremove`, and `apt-get install qemu-guest-agent`.
-5. Remove the machine_id with `sudo truncate -s 0 /etc/machine-id`.
+2. Update the VM to the latest version
+```sh
+    apt update && apt dist-upgrade
+```
+3. Remove any unique identifiers, such as SSH host keys
+```sh
+    rm /etc/ssh/ssh_host_*
+```
+4. Clean up unnecessary files and packages
+```sh
+    apt clean
+    apt autoremove
+    apt-get install qemu-guest-agent
+```
+5.  Remove the `machine_id` 
+```sh
+    truncate -s 0 /etc/machine-id
+```
 6. In the Proxmox web interface, select the VM and click "Convert to Template."
 
 Keep in mind that converting a VM to a template is a destructive operation. Ensure that you have removed any sensitive data and installation media before proceeding.
@@ -55,8 +69,11 @@ Creating container templates in Proxmox VE is similar to creating VM templates. 
 
 1. Prepare a container with the desired configuration, software, and settings.
 2. Update the container to the latest version.
-3. Remove any unique identifiers, such as SSH host keys, with `sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server`.
-4. In the Proxmox web interface, select the container and click "Convert to Template."
+3. Remove any unique identifiers, such as SSH host keys
+```sh
+    sudo rm /etc/ssh/ssh_host_* && sudo dpkg-reconfigure openssh-server`
+```
+4. In the Proxmox web interface, select the container and click `Convert to Template`
 
 Note that cloud-init is not supported for container templates, so you'll need to manually configure settings like hostname and network configuration when cloning a container template.
 
@@ -106,39 +123,39 @@ Proxmox provides a powerful CLI for managing your virtualization environment. Th
 Basic VM commands:
 
 ```bash
-qm list # list VMs
-qm start <VMID> # start VM by ID
-qm shutdown <VMID>
-qm reboot <VMID>
-qm reset <VMID> # hard reset VM
-qm stop <VMID>
+    qm list # list VMs
+    qm start <VMID> # start VM by ID
+    qm shutdown <VMID>
+    qm reboot <VMID>
+    qm reset <VMID> # hard reset VM
+    qm stop <VMID>
 ```
 
 Config VM commands:
 
 ```bash
-qm set --onboot 0 <VMID> # set onboot to 0
-qm config <VMID> # list settings
+    qm set --onboot 0 <VMID> # set onboot to 0
+    qm config <VMID> # list settings
 ```
 
 Basic PCT (container) commands:
 
 ```bash
-pct list
-pct start <VMID>
-pct shutdown <VMID>
-pct reboot <VMID>
-pct reset <VMID>
-pct stop <VMID>
+    pct list
+    pct start <VMID>
+    pct shutdown <VMID>
+    pct reboot <VMID>
+    pct reset <VMID>
+    pct stop <VMID>
 
-pct enter <VMID> # enter the container
+    pct enter <VMID> # enter the container
 ```
 
 Config PCT commands:
 
 ```bash
-pct set --onboot 1 <VMID>
-pct config <VMID> # list configurable settings
+    pct set --onboot 1 <VMID>
+    pct config <VMID> # list configurable settings
 ```
 
 ## Networking
