@@ -13,7 +13,7 @@ theme_settings:
 
   # Header and footer text
   header_text: >
-    <p> Embark on my DevOps adventure with me as I uncover insights, showcase tools, reveal technologies, and share best practices. Expect to see posts delving into other exciting areas like embedded systems, DIY projects, and captivating hobbies.</p>
+    <p> Embark on my DevOps adventure with me as I showcase tools, reveal technologies, and share best practices. Expect to see posts delving into other areas like embedded systems, DIY projects, and captivating hobbies.</p>
   header_text_feature_image:
   footer_text: >
    Powered by <a href="https://jekyllrb.com/">Jekyll</a>
