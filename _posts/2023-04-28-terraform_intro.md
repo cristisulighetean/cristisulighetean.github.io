@@ -1,10 +1,10 @@
 ---
 layout: post
-title: "An Extensive Introduction to Terraform"
+title: "An Extensive Introduction to Terraform with Ansible"
 tags: [terraform, iac]
 ---
 
-# An Extensive Introduction to Terraform with Ansible
+How to use Terraform and Ansible to deploy an Nginx server on an AWS EC2 instance.
 
 ## Introduction
 
@@ -34,7 +34,7 @@ touch main.tf
 
 In the main.tf file, add the following Terraform configuration:
 
-```json
+```py
 provider "aws" {
   region = "us-west-2"
 }
@@ -84,7 +84,7 @@ touch nginx-playbook.yml
 
 Add the following Ansible configuration to the playbook:
 
-```json
+```yml
 ---
 - hosts: all
   become: yes
